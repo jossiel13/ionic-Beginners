@@ -10,7 +10,7 @@ import { componente } from 'src/app/interfaces/componente';
 })
 export class InputPage implements OnInit {
 
-  nombre:any="";
+  nombre:string='';
 
   componentes!: Observable<componente[]>;
 
@@ -25,9 +25,8 @@ password:''
   }
 
   onSubmit(){
-      console.log('submit');
-      console.log(this.usuario);
-      //console.log(formulario);
+
+
 
   }
 
