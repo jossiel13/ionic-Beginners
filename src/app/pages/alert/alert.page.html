@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <app-header titulo="Alert Page"></app-header>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-button id="present-alert">Alert</ion-button>
+  <ion-alert
+    trigger="present-alert"
+    header="Alert"
+    subHeader="Important message"
+    message="This is an alert!"
+    [buttons]="alertButtons"
+  ></ion-alert>
+
+</ion-content>

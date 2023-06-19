@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <app-header titulo="Checkboxs Page"></app-header>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item *ngFor="let item of data" (click)="onClick(item)">
+    <ion-label>
+      {{item.name}}
+    </ion-label>
+    <ion-checkbox [color]="item.name" [(ngModel)]="item.selected" slot="end"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <!-- <ion-buttons (click)="verData()">
+      ver Data
+    </ion-buttons> -->
+  </ion-item>
+</ion-content>
