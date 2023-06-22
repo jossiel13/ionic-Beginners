@@ -1,10 +1,10 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <app-header titulo="List Reorder"></app-header>
+    <!-- <app-header titulo="List Reorder"></app-header> -->
     <!-- Boton -->
     <ion-buttons>
-      <ion-button (click)="reorderDisable != reorderDisable">
-        <ion-icon slot="start">TOOGLE</ion-icon>
+      <ion-button slot="end" (click)="reorderDisable = !reorderDisable"> <!--Asignar ('no es' [!]) a la variable-->
+        <ion-label >TOOGLE</ion-label>
       </ion-button>
     </ion-buttons>
 
@@ -13,6 +13,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
+  <ion-label>{{reorderDisable}}</ion-label>
 
   <ion-list>
     <ion-reorder-group [disabled]="reorderDisable" (ionItemReorder)="doReorder($event);">

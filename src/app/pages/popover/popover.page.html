@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/" color="primary"></ion-back-button>
+  </ion-buttons>
+
+  <ion-title color="primary">popover</ion-title>
+
+  <ion-button slot="end">
+    <ion-button (click)="presentPopover($event)" expand="block" color="primary">
+      <ion-icon slot="icon-only" name="person-outline"></ion-icon>
+    </ion-button>
+  </ion-button>
+
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+<ion-button (click)="presentPopover($event)" expand="block">
+  Click me
+</ion-button>
+
+</ion-content>

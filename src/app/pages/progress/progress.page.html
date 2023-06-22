@@ -1,0 +1,21 @@
+<app-header titulo="Progress Bar"></app-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-progress-bar type="indeterminate" [value]="porcentaje" color="primary"></ion-progress-bar>
+  <ion-progress-bar type="indeterminate" [value]="porcentaje" color="secondary"></ion-progress-bar>
+  <ion-progress-bar type="indeterminate" [value]="porcentaje" color="tertiary"></ion-progress-bar>
+  <ion-progress-bar type="indeterminate" [value]="porcentaje" color="success"></ion-progress-bar>
+  <ion-progress-bar type="indeterminate" [value]="porcentaje" color="warning"></ion-progress-bar>
+  <ion-progress-bar type="indeterminate" [value]="porcentaje" color="danger"></ion-progress-bar>
+  <ion-progress-bar type="indeterminate" [value]="porcentaje" color="light"></ion-progress-bar>
+  <ion-progress-bar type="indeterminate" [value]="porcentaje" color="medium"></ion-progress-bar>
+  <ion-progress-bar type="indeterminate" [value]="porcentaje" color="dark"></ion-progress-bar>
+
+
+  <!-- Ionchange Disparador de Objetos -->
+  <ion-range aria-label="Temperature" (ionChange)="rangeChange($event)">
+    <ion-icon slot="start" name="snow-outline"></ion-icon>
+    <ion-icon slot="end" name="sunny-outline"></ion-icon>
+  </ion-range>
+
+</ion-content>

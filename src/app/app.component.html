@@ -1,20 +1,31 @@
 <ion-app>
 
-  <ion-menu side="start" menuId="first" contentId="main">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu Content</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-item>
-        </ion-item>
-        <ion-item>
-        </ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
+  <ion-split-pane when="md" contentId="main"> <!--incluir dimension [when]-->
 
-  <ion-router-outlet id="main"></ion-router-outlet>
+    <ion-menu side="start" menuId="first" contentId="main">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menú</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+
+          <ion-menu-toggle *ngFor="let c of componentes |async" [routerLink]="c.redirectTo" autoHide="false" detail>
+            <ion-item> <!--detail for md [material desing] -->
+              <ion-icon slot="start" [name]="c.icon"></ion-icon>
+              <ion-label>{{c.name}}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet id="main"></ion-router-outlet>
+
+  </ion-split-pane>
+
+  <!-- <ion-router-outlet id="menu-content"></ion-router-outlet> -->
+
 </ion-app>

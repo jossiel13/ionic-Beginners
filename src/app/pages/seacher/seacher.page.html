@@ -1,0 +1,35 @@
+<app-header titulo="Search Page"></app-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-searchbar placeholder="Default"
+                (ionChange)="onSearchChange($event);"
+                [debounce]="250"
+                 animated>
+  </ion-searchbar>
+  <!-- //** Error Uso de onChange en ves de ionChange **// -->
+ <!--Debounce tiempo de Esperad para comenzar la busqueda-->
+
+<ion-list>
+  <ion-item
+            *ngFor="let item of albume | filtro:textoBusqueda">
+            <!-- argumento adicional => filtro :'' -->
+            <!-- filtro:textoBusqueda -->
+            <!-- encapsular filtro => filtro:textoBusqueda:'title' -->
+    <ion-label>{{item.title}}</ion-label>
+  </ion-item>
+</ion-list>
+
+
+
+<!-- <ion-searchbar color="primary" placeholder="Primary"></ion-searchbar>
+<ion-searchbar color="secondary" placeholder="Secondary"></ion-searchbar>
+<ion-searchbar color="tertiary" placeholder="Tertiary"></ion-searchbar>
+<ion-searchbar color="success" placeholder="Success"></ion-searchbar>
+<ion-searchbar color="warning" placeholder="Warning"></ion-searchbar>
+<ion-searchbar color="danger" placeholder="Danger"></ion-searchbar>
+<ion-searchbar color="light" placeholder="Light"></ion-searchbar>
+<ion-searchbar color="medium" placeholder="Medium"></ion-searchbar>
+<ion-searchbar color="dark" placeholder="Dark"></ion-searchbar> -->
+
+</ion-content>

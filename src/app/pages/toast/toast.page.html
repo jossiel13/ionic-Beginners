@@ -1,0 +1,16 @@
+<app-header titulo="Toast Page"></app-header>
+
+<ion-content [fullscreen]="true">
+
+  <!-- <ion-button (click)="presentToast('bottom')" expand="block" fill="clear" shape="round">
+    Click me
+  </ion-button> -->
+
+  <!-- <ion-button (click)="presentToast()">Click Me</ion-button>
+  <p>{{ handlerMessage }}</p>
+  <p>{{ roleMessage }}</p> -->
+
+  <ion-button (click)="presentBaselineToast()">Open Baseline Layout Toast</ion-button>
+  <ion-button (click)="presentStackedToast()" class="active">Click Stacked Layout Toast</ion-button>
+
+</ion-content>

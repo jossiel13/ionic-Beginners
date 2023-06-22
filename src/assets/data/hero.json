@@ -1,0 +1,30 @@
+[
+  {
+    "superhero": "Batman",
+    "publisher": "DC",
+    "alter_ego": "Action",
+    "first_appearance": "Action",
+    "characters": "Action"
+  },
+  {
+    "superhero": "Superman",
+    "publisher": "DC",
+    "alter_ego": "Action",
+    "first_appearance": "Action",
+    "characters": "Action"
+  },
+  {
+    "superhero": "Flash",
+    "publisher": "DC",
+    "alter_ego": "Action",
+    "first_appearance": "Action",
+    "characters": "Action"
+  },
+  {
+    "superhero": "Flash",
+    "publisher": "Marvel",
+    "alter_ego": "Action",
+    "first_appearance": "Action",
+    "characters": "Action"
+  }
+]

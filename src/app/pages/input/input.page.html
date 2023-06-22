@@ -29,23 +29,22 @@
 
   <ion-item>
     <ion-label>Email :</ion-label>
-    <ion-button type="email"
+    <ion-input type="email"
                 name="email"
                 placeholder="Email"
                 [(ngModel)]="usuario.email"
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,5}$"
-                required></ion-button>
+                required></ion-input> <!-- -->
   </ion-item>
 
- <!-- <ion-item>
+ <ion-item>
     <ion-label>Password :</ion-label>
-    <ion-button type="Password"
+    <ion-input type="password"
                 name="Password"
                 placeholder="Password"
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,5}$"
                 [(ngModel)]="usuario.password"
-                required></ion-button>
-  </ion-item> -->
+                required></ion-input>
+  </ion-item>
 
  <ion-button type="submit" [disabled]="formulario.invalid" expand="block">
     Login
